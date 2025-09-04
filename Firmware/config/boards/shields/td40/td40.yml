@@ -1,0 +1,12 @@
+file_format: "1"
+id: td40
+name: td40
+type: shield
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow 
+  # - studio
