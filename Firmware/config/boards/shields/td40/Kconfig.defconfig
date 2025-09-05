@@ -3,16 +3,26 @@ if SHIELD_td40
 config ZMK_KEYBOARD_NAME
     default "td40"
 
+if ZMK_DISPLAY
+
 config I2C
-	default y
+    default y
 
 config SSD1306
-	default y
+    default y
+
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+
+endif # ZMK_DISPLAY
 
 if LVGL
 
 config LV_Z_VDB_SIZE
-	default 64
+	default 32
 
 config LV_DPI_DEF
 	default 148
