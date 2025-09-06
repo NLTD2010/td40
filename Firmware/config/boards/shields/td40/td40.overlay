@@ -1,10 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
+#include "td40-layouts.dtsi"
 / {
     chosen {
         zmk,kscan = &kscan0;
-		zmk,matrix-transform = &default_transform;
+		// zmk,matrix-transform = &default_transform;
+		zmk,physical-layout = &physical_layout0;
 		zephyr,display = &oled;
+		
     };
 
 	default_transform: keymap_transform_0 {
@@ -45,7 +47,7 @@
             ;
     };
 	
-		encoder: encoder {
+	encoder: encoder {
 		compatible = "alps,ec11";
 		a-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -57,6 +59,9 @@
 		sensors = <&encoder>;
 	};
 	
+};
+&physical_layout0 {
+    transform = <&default_transform>;
 };
 
 &pro_micro_i2c {
