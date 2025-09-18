@@ -355,130 +355,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:RotaryEncoder_Switch"
 			(pin_names
 				(offset 0.254)
@@ -2011,10 +1887,10 @@
 				)
 			)
 			(symbol "SK6812MINI_1_1"
-				(pin output line
+				(pin input line
 					(at -5.08 2.54 0)
 					(length 1.1938)
-					(name "DOUT"
+					(name "DIN"
 						(effects
 							(font
 								(size 0.7112 0.7112)
@@ -2065,10 +1941,10 @@
 						)
 					)
 				)
-				(pin input line
+				(pin output line
 					(at 5.08 -2.54 180)
 					(length 1.1938)
-					(name "DIN"
+					(name "DOUT"
 						(effects
 							(font
 								(size 0.7112 0.7112)
@@ -3484,12 +3360,12 @@
 		(uuid "1d96b461-5ce2-47df-953e-1adbecb09940")
 	)
 	(no_connect
-		(at 251.46 238.76)
-		(uuid "31aabd85-62fb-4fce-bf5f-5e69b569bbe5")
-	)
-	(no_connect
 		(at 74.93 245.11)
 		(uuid "6049be5f-38e3-43f6-96b5-e38259dc83e5")
+	)
+	(no_connect
+		(at 474.98 314.96)
+		(uuid "78dde59b-6f4b-4ee2-9d32-e09cd3526392")
 	)
 	(no_connect
 		(at 30.48 29.21)
@@ -4227,16 +4103,6 @@
 	)
 	(wire
 		(pts
-			(xy 474.98 314.96) (xy 485.14 314.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2428ce6d-ee94-412f-927d-04bcc7d7e49d")
-	)
-	(wire
-		(pts
 			(xy 302.26 314.96) (xy 297.18 314.96)
 		)
 		(stroke
@@ -4934,16 +4800,6 @@
 			(type default)
 		)
 		(uuid "41c84346-1f50-46cb-8d55-c8f18bc38b64")
-	)
-	(wire
-		(pts
-			(xy 485.14 212.09) (xy 485.14 314.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41e44567-a43a-4913-baf8-db4071f609f8")
 	)
 	(wire
 		(pts
@@ -7947,6 +7803,16 @@
 	)
 	(wire
 		(pts
+			(xy 251.46 238.76) (xy 251.46 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc424213-d320-4184-81e3-fb54e8a91b15")
+	)
+	(wire
+		(pts
 			(xy 238.76 223.52) (xy 238.76 233.68)
 		)
 		(stroke
@@ -8735,28 +8601,6 @@
 			)
 		)
 	)
-	(global_label "SCL"
-		(shape input)
-		(at 43.18 151.13 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "28823101-05b8-489e-b901-8fdc33fc6962")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.18 157.6228 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "col3"
 		(shape input)
 		(at 323.85 22.86 180)
@@ -8867,6 +8711,26 @@
 			)
 		)
 	)
+	(global_label "LED"
+		(shape input)
+		(at 251.46 246.38 270)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "52284e72-2077-4d80-b4da-9632399bff84")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 251.46 246.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "rot0"
 		(shape input)
 		(at 486.41 119.38 270)
@@ -8880,28 +8744,6 @@
 		(uuid "57c3de2e-a309-4372-a793-a51111ec4fba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 486.41 126.2356 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA"
-		(shape input)
-		(at 48.26 151.13 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5a5b11bd-d473-4fe7-93a8-4334051c84c3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.26 157.6833 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9127,26 +8969,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "LED"
-		(shape input)
-		(at 485.14 212.09 90)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "92ecef9c-5d8f-43f5-85f6-a34464a4c245")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 485.14 212.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 				(hide yes)
 			)
 		)
@@ -9698,272 +9520,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 43.18 147.32 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005aa6d1f3")
-		(property "Reference" "R1"
-			(at 43.18 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 43.18 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "keebio:R_0805"
-			(at 41.402 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 43.18 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 43.18 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7416d035-996d-4d99-ac78-b37a6bc142d2")
-		)
-		(pin "2"
-			(uuid "62d21d83-41f7-40b7-aeb9-b965a0ee38c6")
-		)
-		(instances
-			(project "td!40"
-				(path "/048fe68f-0b02-4a46-8597-0d1a532f554f"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 48.26 147.32 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005aa6d2a6")
-		(property "Reference" "R2"
-			(at 48.26 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 48.26 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "keebio:R_0805"
-			(at 46.482 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 48.26 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 48.26 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a65a1760-7107-4c0a-9125-3fe3cf26b8dc")
-		)
-		(pin "2"
-			(uuid "26f15fc6-5a14-429c-b99d-770907cc1202")
-		)
-		(instances
-			(project "td!40"
-				(path "/048fe68f-0b02-4a46-8597-0d1a532f554f"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 43.18 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005aa6e31e")
-		(property "Reference" "#PWR021"
-			(at 43.18 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 43.18 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 43.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "40bc7866-a589-4f06-afff-ac07a5094882")
-		)
-		(instances
-			(project "td!40"
-				(path "/048fe68f-0b02-4a46-8597-0d1a532f554f"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 48.26 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005aa6e3d0")
-		(property "Reference" "#PWR022"
-			(at 48.26 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 48.26 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 48.26 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0e1430fe-bf3e-41d6-a344-3be36a895eb6")
-		)
-		(instances
-			(project "td!40"
-				(path "/048fe68f-0b02-4a46-8597-0d1a532f554f"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "KB:KEYSW")
 		(at 316.23 66.04 0)
 		(unit 1)
@@ -10474,7 +10030,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f7cadc8-e446-4ead-ba14-aaf9117f88d3")
-		(property "Reference" "SW2"
+		(property "Reference" "SW23"
 			(at 68.58 242.316 0)
 			(effects
 				(font
@@ -10539,7 +10095,7 @@
 		(instances
 			(project "td!40"
 				(path "/048fe68f-0b02-4a46-8597-0d1a532f554f"
-					(reference "SW2")
+					(reference "SW23")
 					(unit 1)
 				)
 			)
@@ -10571,7 +10127,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal"
+		(property "Footprint" "crone:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal_flipped"
 			(at 59.69 251.206 90)
 			(effects
 				(font
@@ -10772,7 +10328,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 412.75 54.6099 90)
 			(effects
 				(font
@@ -10927,7 +10483,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 351.79 54.6099 90)
 			(effects
 				(font
@@ -11562,7 +11118,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 412.75 87.6299 90)
 			(effects
 				(font
@@ -11789,7 +11345,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 412.75 38.0999 90)
 			(effects
 				(font
@@ -11944,7 +11500,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 372.11 38.0999 90)
 			(effects
 				(font
@@ -12032,7 +11588,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 392.43 71.1199 90)
 			(effects
 				(font
@@ -12259,7 +11815,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 392.43 87.6299 90)
 			(effects
 				(font
@@ -12347,7 +11903,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 311.15 71.1199 90)
 			(effects
 				(font
@@ -12435,7 +11991,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 453.39 38.0999 90)
 			(effects
 				(font
@@ -12596,7 +12152,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 311.15 38.0999 90)
 			(effects
 				(font
@@ -12757,7 +12313,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 331.47 54.6099 90)
 			(effects
 				(font
@@ -12918,7 +12474,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 351.79 38.0999 90)
 			(effects
 				(font
@@ -13272,7 +12828,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 290.83 71.1199 90)
 			(effects
 				(font
@@ -13360,7 +12916,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 412.75 71.1199 90)
 			(effects
 				(font
@@ -13448,7 +13004,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 250.19 54.6099 90)
 			(effects
 				(font
@@ -13882,7 +13438,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 311.15 87.6299 90)
 			(effects
 				(font
@@ -14176,7 +13732,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 473.71 71.1199 90)
 			(effects
 				(font
@@ -14264,7 +13820,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 270.51 87.6299 90)
 			(effects
 				(font
@@ -14352,7 +13908,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 433.07 38.0999 90)
 			(effects
 				(font
@@ -15009,7 +14565,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 473.71 54.6099 90)
 			(effects
 				(font
@@ -15303,7 +14859,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 270.51 54.6099 90)
 			(effects
 				(font
@@ -15595,7 +15151,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 433.07 87.6299 90)
 			(effects
 				(font
@@ -15683,7 +15239,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 433.07 54.6099 90)
 			(effects
 				(font
@@ -15838,7 +15394,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 250.19 87.6299 90)
 			(effects
 				(font
@@ -15926,7 +15482,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 473.71 38.0999 90)
 			(effects
 				(font
@@ -16352,7 +15908,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 290.83 54.6099 90)
 			(effects
 				(font
@@ -16574,7 +16130,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 453.39 87.6299 90)
 			(effects
 				(font
@@ -16662,7 +16218,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 331.47 38.0999 90)
 			(effects
 				(font
@@ -17249,7 +16805,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 392.43 38.0999 90)
 			(effects
 				(font
@@ -17337,7 +16893,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 453.39 71.1199 90)
 			(effects
 				(font
@@ -17491,7 +17047,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 433.07 71.1199 90)
 			(effects
 				(font
@@ -17719,7 +17275,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 270.51 71.1199 90)
 			(effects
 				(font
@@ -18517,7 +18073,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 250.19 38.0999 90)
 			(effects
 				(font
@@ -18812,7 +18368,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 270.51 38.0999 90)
 			(effects
 				(font
@@ -18900,7 +18456,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 311.15 54.6099 90)
 			(effects
 				(font
@@ -18988,7 +18544,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 331.47 71.1199 90)
 			(effects
 				(font
@@ -19365,7 +18921,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 372.11 54.6099 90)
 			(effects
 				(font
@@ -19525,7 +19081,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 290.83 38.0999 90)
 			(effects
 				(font
@@ -20099,7 +19655,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 392.43 54.6099 90)
 			(effects
 				(font
@@ -20187,7 +19743,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 372.11 71.1199 90)
 			(effects
 				(font
@@ -20687,7 +20243,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 290.83 87.6299 90)
 			(effects
 				(font
@@ -20775,7 +20331,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 331.47 87.6299 90)
 			(effects
 				(font
@@ -20930,7 +20486,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 453.39 54.6099 90)
 			(effects
 				(font
@@ -21358,7 +20914,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 351.79 71.1199 90)
 			(effects
 				(font
@@ -21932,7 +21488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 250.19 71.1199 90)
 			(effects
 				(font
