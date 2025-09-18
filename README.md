@@ -1,35 +1,51 @@
-# td40
-**TD40** is a compact 40% mechanical keyboard designed for efficiency and portability. It features hot-swappable switches, a rotary knob, an OLED display, wireless connectivity, and per-key RGB lighting.
+# TD40
 
-![td40](Image/td!40-black-back.png)
+[![GitHub Repo](https://img.shields.io/badge/View%20on-GitHub-blue?logo=github)](https://github.com/NLTD2010/td40)
 
-![pcb](Image/pcb.png)
+> **TD40** is a compact 40% mechanical keyboard designed for efficiency and portability.  
+> It features **hot-swappable switches**, a **rotary knob**, an **OLED display**, **wireless connectivity**, and **per-key RGB lighting**.
 
-## Features
-* Using SMD soldering for clean PCB
-* Using microcontroller Nice!Nano v2. So USB-C or Bluetooth is all compatible.
-* a rotary encoders
-* 0.91' OLED screen
-* RGB per-key
-* Hotswappable 
-* Open and visible components (in the style of Plaid, Romac etc)
-* Simple and flexible case options 
+---
 
-## Layout
+## 🖼️ Preview
+
+| TD40 (Back) | PCB |
+|-------------|-----|
+| ![td40](Image/td!40-black-back.png) | ![pcb](Image/pcb.png) |
+
+---
+
+## ✨ Features
+- Clean PCB design with **SMD soldering**
+- **Nice!Nano v2** microcontroller – USB-C & Bluetooth compatible
+- **Rotary encoder** + knob
+- **0.91" OLED** screen
+- **Per-key RGB** lighting
+- **Hot-swappable** switches
+- Open & visible components (Plaid / Romac style)
+- Simple, flexible case options
+
+---
+
+## ⌨️ Layout
 ![layout](Image/my_keymap.svg)
 
+---
 
-## Bill of Materials
+## 📦 Bill of Materials
 
-| # | Item                         | Quantity |
-|---|------------------------------|----------|
+| # | Item                         | Qty |
+|---|------------------------------|----:|
 | 1 | PCB                          | 1 |
 | 2 | FR4 plate                    | 1 |
 | 3 | Mica case                    | 1 |
-| 4 | Controller (Nice!Nano v2)    | 1 |
+| 4 | Controller (**Nice!Nano v2**) | 1 |
 | 5 | Switches (5-pin MX footprint)| 45 |
 | 6 | Kailh hotswap socket         | 45 |
 | 7 | Diodes                       | 46 |
 | 8 | Rotary encoder & knob        | 1 |
 | 9 | 0.91" OLED screen            | 1 |
 
+---
+
+💡 **Tip:** Check out the [repository](https://github.com/NLTD2010/td40) for firmware, build guide, and more!
