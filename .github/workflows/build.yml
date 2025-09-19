@@ -7,7 +7,10 @@ on:
         default: "firmware"
         required: false
         type: string
-
+      version:
+        description: "Tag version"
+        required: true
+        type: string
 jobs:
   matrix:
     runs-on: ubuntu-22.04
@@ -144,6 +147,31 @@ jobs:
       - name: Merge Artifacts
         uses: actions/upload-artifact/merge@v4
         with:
-          name: ${{ inputs.archive_name }}
+          name: "${{ inputs.archive_name }} ${{ inputs.version }}"
           pattern: artifact-*
           delete-merged: true
+
+  release:
+    runs-on: ubuntu-latest
+    needs: merge
+    name: Release
+    steps:
+      - name: Download merged artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: "${{ inputs.archive_name }} ${{ inputs.version }}"
+          path: .
+
+      - name: Rename UF2
+        run: |
+          mv "td40 dongle_display-nice_nano_v2-zmk.uf2" "${{ inputs.archive_name }}_${{ inputs.version }}.uf2"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.version }}
+          name: ${{ inputs.version }}
+          body: |
+            ZMK Firmware for TD40 – ${{ inputs.version }}
+          files: |
+            ${{ inputs.archive_name }}_${{ inputs.version }}.uf2
