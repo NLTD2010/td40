@@ -31,15 +31,15 @@
 
 ## Bill of Materials
 
-- PCB – 1
-- FR4 plate – 1
-- Mica case – 1
-- Controller (Nice!Nano v2) – 1
-- Switches (5-pin MX footprint) – 45
-- Kailh hotswap socket – 45
-- Diodes – 46
-- Rotary encoder & knob – 1
-- 0.91" OLED screen – 1
+- PCB - 1
+- FR4 plate - 1
+- Mica case - 1
+- Controller (Nice!Nano v2) - 1
+- Switches (5-pin MX footprint) - 45
+- Kailh hotswap socket - 45
+- Diodes(1n4148ws) - 46
+- Rotary encoder & knob - 1
+- 0.91" OLED screen - 1
 
 ---
 
